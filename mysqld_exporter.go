@@ -39,6 +39,7 @@ import (
 	"gopkg.in/alecthomas/kingpin.v2"
 	"gopkg.in/ini.v1"
 
+
 	"github.com/prometheus/mysqld_exporter/collector"
 )
 
@@ -92,6 +93,7 @@ var scrapers = map[collector.Scraper]bool{
 	collector.ScrapePerfReplicationGroupMemberStats{}:     false,
 	collector.ScrapePerfReplicationApplierStatsByWorker{}: false,
 	collector.ScrapeUserStat{}:                            false,
+	collector.ScrapeSysUserSummary{}:                      false,
 	collector.ScrapeClientStat{}:                          false,
 	collector.ScrapeTableStat{}:                           false,
 	collector.ScrapeSchemaStat{}:                          false,
