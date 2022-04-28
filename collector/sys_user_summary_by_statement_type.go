@@ -40,35 +40,35 @@ const sysUserSummaryQuery = `
 var (
 	sysUserSummaryTotalStatements = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "user_total_statements"),
-		" The total number of statements for the user",
+		"The total number of occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementTotalLatency = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "user_statement_total_latency"),
-		"The total wait time of timed statements for the user",
+		"The total wait time of timed occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementMaxLatency = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "user_statement_max_latency"),
-		"The maximum wait time per timed statement for the user",
+		"The maximum single wait time of timed occurrences of the statement event for the user.",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementLockLatency = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "user_statement_lock_latency"),
-		"The maximum wait time per timed statement for the user",
+		"The total time waiting for locks by timed occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementRowsSent = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "rows_sent_by_user"),
-		"The number of rows sent per timed statement for the user",
+		"The total number of rows returned by occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementRowsExamined = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "rows_examined_by_user"),
-		"The number of rows examined per timed statement for the user",
+		"The total number of rows read from storage engines by occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementRowsAffected = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "rows_affected_by_user"),
-		"The number of rows affected per timed statement for the user",
+		"The total number of rows affected by occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 	sysUserSummaryStatementFullScans = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, sysSchema, "full_scans_by_user"),
-		"The total full scans per timed statement for the user",
+		"The total number of full table scans by occurrences of the statement event for the user",
 		[]string{"user", "statement"}, nil)
 )
 
