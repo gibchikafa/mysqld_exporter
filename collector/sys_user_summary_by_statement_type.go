@@ -76,12 +76,12 @@ type ScrapeSysUserSummaryByStatemementType struct{}
 
 // Name of the Scraper. Should be unique.
 func (ScrapeSysUserSummaryByStatemementType) Name() string {
-	return sysSchema + ".user_summary"
+	return sysSchema + ".user_summary_by_statement_type"
 }
 
 // Help describes the role of the Scraper.
 func (ScrapeSysUserSummaryByStatemementType) Help() string {
-	return "Collect per user metrics from sys.x$user_summary. See https://dev.mysql.com/doc/refman/5.7/en/sys-user-summary.html for details"
+	return "Collect per user metrics from sys.x$user_summary_by_statement_type See https://dev.mysql.com/doc/refman/5.7/en/sys-user-summary-by-statement-type.html"
 }
 
 // Version of MySQL from which scraper is available.
